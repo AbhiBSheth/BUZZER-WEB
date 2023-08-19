@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['nm'])) {
     header("location:index.php");
 }
-$cn = mysqli_connect("localhost", "root", "", "bz");
+$cn = mysqli_connect("localhost", "root", "", "ad");
 $p = mysqli_fetch_array(mysqli_query($cn, "SELECT * FROM `join` WHERE id = '$_SESSION[nm]'"));
 $q = mysqli_query($cn, "SELECT * FROM `join` WHERE id = '$_SESSION[nm]'");
 if(mysqli_num_rows($q) == 0)
